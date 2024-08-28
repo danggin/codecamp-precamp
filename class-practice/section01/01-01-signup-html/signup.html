@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>회원가입</title>
+    <link defer href="../01-02-signup-css/signup.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="paper">
+      <div class="title">회원 가입을 위해</div>
+      <div class="title">정보를 입력해주세요</div>
+
+      <div class="content">
+        <div class="nametag">* 이메일</div>
+        <input type="text" class="input" />
+
+        <div class="nametag">* 이름</div>
+        <input type="text" class="input" />
+
+        <div class="nametag">* 비밀번호</div>
+        <input type="password" class="input" />
+
+        <div class="nametag">* 비밀번호 확인</div>
+        <input type="password" class="input" />
+
+        <div class="flex-box gender">
+          <input type="radio" name="gender" id="female" />
+          <label for="female">여성</label>
+          <input type="radio" name="gender" id="male" />
+          <label for="male">남성</label>
+        </div>
+
+        <div class="flex-box agree">
+          <input type="checkbox" id="agree" />
+          <label for="agree">이용약관, 개인정보 수집 및 이용, 마케팅 활용 선택에 모두 동의합니다.</label>
+        </div>
+      </div>
+
+      <button class="signup-button">가입하기</button>
+    </div>
+  </body>
+</html>
