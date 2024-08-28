@@ -27,6 +27,11 @@
   --gray-800: #333333;
   --gray-900: #1c1c1c;
   --gray-b: #000000;
+  --readius-sm: 8px;
+  --gap-sm: 4px;
+  --gap-md: 8px;
+  --gap-lg: 16px;
+  --gap-xl: 24px;
 }
 
 /* Typography */
@@ -72,7 +77,7 @@
 .container {
   height: 1048px;
   display: flex;
-  border-radius: 8px;
+  border-radius: var(--readius-sm);
   overflow: hidden;
 }
 
@@ -92,8 +97,8 @@
   flex-shrink: 0;
   display: flex;
   justify-content: flex-end;
-  gap: 16px;
-  padding: 24px;
+  gap: var(--gap-lg);
+  padding: var(--gap-xl);
 }
 
 .header-search {
@@ -119,7 +124,7 @@
   width: 920px;
   height: 48px;
   border: none;
-  border-radius: 8px;
+  border-radius: var(--readius-sm);
   background-color: var(--p-200);
   padding: 0 48px;
   font-size: 20px;
@@ -132,37 +137,255 @@
 .header-aside {
   min-width: 163px;
   gap: 20px;
+  align-items: center;
 }
 
-.button-icon {
+.badge-student {
+  width: 111px;
+  height: 48px;
+  border: 1px solid var(--p-100);
+  border-radius: var(--readius-sm);
+}
+
+.badge-student:before {
+  background-image: url('../images/logo_codecamp_yellow.svg');
+}
+
+.button-icon,
+.title-icon {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: var(--gap-md);
+}
+
+.button-icon:before,
+.title-icon:before {
+  content: '';
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: center;
 }
 
 .button-icon:before {
-  content: '';
   width: 32px;
   height: 32px;
-  background-repeat: no-repeat;
-  background-position: center;
+}
+
+.title-icon:before {
+  width: 24px;
+  height: 24px;
+}
+
+.sidebar {
+  padding: 16px 20px 0px;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.channel-profile {
+  margin-bottom: var(--gap-lg);
+}
+
+.menu-list li {
+  gap: var(--gap-sm);
+}
+
+.menu-list li + li {
+  margin-top: var(--gap-lg);
+}
+
+.menu-list li a {
+  text-align: center;
+  color: var(--gray-100);
+  font-weight: 600;
+}
+
+.icon-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  margin-bottom: var(--gap-md);
+  transition: all 0.4s ease;
+}
+
+.menu-list li.active .icon-box,
+.menu-list li:hover .icon-box {
+  border-radius: var(--readius-sm);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.button-more .icon-box img {
+  max-width: 24px;
+}
+
+.menu-list li .icon-box img {
+  transition: all 0.4s ease;
+}
+
+.menu-list li:hover .icon-box img {
+  transform: scale(110%);
+}
+
+.button-add,
+.button-my-profile {
+  width: 40px;
+  height: 40px;
+}
+
+.button-add {
+  margin-bottom: var(--gap-md);
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  text-align: center;
+}
+
+.button-my-profile {
+  border-radius: var(--readius-sm);
+  background-color: #b14bb6;
 }
 
 .content {
   width: 1760px;
   display: flex;
   background-color: var(--p-400);
-  border-radius: 8px;
+  border-radius: var(--readius-sm);
 }
 
 .content-info {
   min-width: 400px;
   background-color: var(--p-100);
-  border-radius: 8px;
+  border-radius: var(--readius-sm);
+  padding: 20px;
+}
+
+.info-header {
+  padding-bottom: var(--gap-xl);
+  margin-bottom: var(--gap-xl);
+  border-bottom: 1px solid var(--p-200);
+}
+
+.info-header h3 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.option-list {
+  align-items: center;
+  gap: var(--gap-md);
+}
+
+.option-list button {
+  width: 24px;
+  height: 24px;
+}
+
+.button-contract {
+  margin-top: 24px;
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  color: var(--p-main);
+  background-color: #fff;
+  border-radius: var(--readius-sm);
+  justify-content: center;
+}
+
+.button-contract:before {
+  width: 24px;
+  height: 24px;
+  background-image: url('../images/icon_contract_edit.svg');
+}
+
+.info-menu {
+  margin-top: var(--gap-lg);
+}
+
+.info-menu h3 {
+  margin-bottom: 12px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.badge-status {
+  width: 66px;
+  height: 32px;
+  border-radius: var(--readius-sm);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.camp-name:before {
+  background-image: url('../images/logo_codecamp_white.svg');
+}
+.student-list:before {
+  background-image: url('../images/icon_person_group.svg');
+}
+.channel:before {
+  background-image: url('../images/icon-channel.svg');
+}
+.block-member:before {
+  background-image: url('../images/icon_skull.svg');
+}
+
+.no-member {
+  padding-top: var(--gap-md);
+  text-align: center;
+}
+
+.no-member-message {
+  font-size: 14px;
+  color: var(--p-300);
+  line-height: 20px;
+}
+
+.button-go-signup {
+  width: 126px;
+  height: 40px;
+  margin: 16px auto 0;
+  background-color: var(--p-main);
+  border-radius: var(--readius-sm);
+  justify-content: center;
+}
+
+.button-go-signup:before {
+  width: 24px;
+  height: 24px;
+  background-image: url('../images/icon_person_add.svg');
+}
+
+.chennal-list {
+  padding: 0 var(--gap-lg);
+}
+
+.chennal-list li + li {
+  margin-top: 12px;
+}
+
+.chennal-list li {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-md);
+}
+
+.chennal-list li:before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background-image: url('../images/icon_hashtag.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.chennal-list a {
+  color: var(--gray-200);
+  font-size: 18px;
+  font-weight: 400;
 }
 
 .content-form {
   flex-grow: 1;
+  padding: 40px 60px;
 }
 
 .content-cover {

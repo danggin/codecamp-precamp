@@ -24,9 +24,7 @@
           <input type="text" placeholder="수강생을 검색해 보세요." />
         </div>
         <aside class="header-aside flex-box">
-          <button type="button" class="button-student button-icon">
-            <span>수강생</span>
-          </button>
+          <span class="badge-student button-icon">수강생</span>
           <button type="button">
             <image src="./asset/images/icon_help.svg" alt="도움말 보기" />
           </button>
@@ -34,40 +32,50 @@
       </header>
       <section class="container">
         <aside class="sidebar flex-box col justify-between">
-          <div class="">
+          <div>
             <div class="channel-profile">
               <img src="./asset/images/image_channel.png" alt="채널 프로필" />
             </div>
             <ul class="menu-list">
-              <li class="flex-box col align-center">
+              <li class="flex-box col align-center active">
                 <a href="" class="button-home">
-                  <img src="./asset/images/icon_home.svg" alt="홈 버튼" />
+                  <div class="icon-box">
+                    <img src="./asset/images/icon_home_active.svg" alt="홈 버튼" />
+                  </div>
+                  <span>홈</span>
                 </a>
-                <span>홈</span>
               </li>
               <li class="flex-box col align-center">
                 <a href="" class="button-chat">
-                  <img src="./asset/images/icon_chat.svg" alt="채팅 버튼" />
+                  <div class="icon-box">
+                    <img src="./asset/images/icon_chat.svg" alt="채팅 버튼" />
+                  </div>
+                  <span>대화</span>
                 </a>
-                <span>대화</span>
               </li>
               <li class="flex-box col align-center">
                 <a href="" class="button-notifications">
-                  <img src="./asset/images/icon_notifications.svg" alt="알림 버튼" />
+                  <div class="icon-box">
+                    <img src="./asset/images/icon_notifications.svg" alt="알림 버튼" />
+                  </div>
+                  <span>알림</span>
                 </a>
-                <span>알림</span>
               </li>
               <li class="flex-box col align-center">
                 <a href="" class="button-bookmark">
-                  <img src="./asset/images/icon_bookmark.svg" alt="북마크 버튼" />
+                  <div class="icon-box">
+                    <img src="./asset/images/icon_bookmark.svg" alt="북마크 버튼" />
+                  </div>
+                  <span>북마크</span>
                 </a>
-                <span>북마크</span>
               </li>
               <li class="flex-box col align-center">
                 <a href="" class="button-more">
-                  <img src="./asset/images/icon_more_meatball.svg" alt="더보기 버튼" />
+                  <div class="icon-box">
+                    <img src="./asset/images/icon_more_meatball.svg" alt="더보기 버튼" />
+                  </div>
+                  <span>더 보기</span>
                 </a>
-                <span>더 보기</span>
               </li>
             </ul>
           </div>
@@ -83,7 +91,7 @@
         <section class="content">
           <div class="content-info">
             <div class="info-header">
-              <div class="flex-box justify-between">
+              <div class="flex-box justify-between align-center">
                 <h3>코드캠프</h3>
                 <ul class="option-list flex-box">
                   <li>
@@ -98,28 +106,28 @@
                   </li>
                 </ul>
               </div>
-              <button class="button-contract">서약서 자세히 보기</button>
+              <button class="button-contract button-icon">서약서 자세히 보기</button>
             </div>
-            <div class="flex-box">
+            <div class="flex-box justify-between align-center info-menu">
               <h3 class="title-icon camp-name">코드캠프 13기</h3>
-              <span class="badge-status">수강중</span>
+              <span class="badge-status flex-box align-center justify-center">수강중</span>
             </div>
 
             <div>
-              <div class="flex-box">
+              <div class="flex-box justify-between info-menu">
                 <h3 class="title-icon student-list">수강생 리스트</h3>
                 <button type="button">
                   <img src="./asset/images/icon_arrow_down.svg" alt="더보기 버튼" />
                 </button>
               </div>
               <div class="no-member">
-                <p>현재 가입한 멤버가 없어요.<br />회원가입 해보세요.</p>
-                <button type="button" class="button-icon flex-box button-signup">가입하기</button>
+                <p class="no-member-message">현재 가입한 멤버가 없어요.<br />회원가입 해보세요.</p>
+                <button type="button" class="button-icon flex-box button-go-signup">가입하기</button>
               </div>
             </div>
 
             <div>
-              <div class="flex-box">
+              <div class="flex-box justify-between info-menu">
                 <h3 class="title-icon channel">채널</h3>
                 <button>
                   <img src="./asset/images/icon_arrow_down.svg" alt="더보기 버튼" />
@@ -141,7 +149,7 @@
               </ul>
             </div>
 
-            <div class="flex-box">
+            <div class="flex-box justify-between info-menu">
               <h3 class="title-icon block-member">차단 멤버 리스트</h3>
             </div>
           </div>
@@ -195,7 +203,7 @@
                   <input type="checkbox" id="check-agree" />
                   <label for="check-agree">집에는 씻으러만 가는 데 동의합니다.</label>
                 </div>
-                <button>가입</button>
+                <button class="button-signup">가입</button>
               </fieldset>
             </form>
           </div>
