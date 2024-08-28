@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>DOM 조작하기</title>
+    <script>
+      function switchPhrase() {
+        document.getElementById('text').innerText = '반갑습니다.';
+      }
+    </script>
+  </head>
+  <body>
+    <div id="text">안녕하세요.</div>
+    <button onclick="switchPhrase()">바꾸자</button>
+  </body>
+</html>

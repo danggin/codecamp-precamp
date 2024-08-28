@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>내장 객체 실습 2</title>
+    <script>
+      function requestAuthNumber() {
+        const random = Math.random();
+        console.log(random);
+
+        const six = Math.floor(random * 1000000);
+
+        const authNumber = String(six).padStart(6, '0');
+        console.log(authNumber);
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="requestAuthNumber()">인증번호 요청</button>
+  </body>
+</html>

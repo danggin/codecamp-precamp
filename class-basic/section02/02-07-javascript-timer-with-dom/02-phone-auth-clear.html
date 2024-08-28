@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>Timer 실습</title>
+    <script>
+      let timer;
+      function getTimer() {
+        clearInterval(timer);
+        // 다시 요청하기 버튼읋 누르면 setInterval 을 초기화
+
+        let time = 180 - 1;
+
+        timer = setInterval(function () {
+          const minute = String(Math.floor(time / 60)).padStart(2, '0');
+          const second = String(time % 60).padStart(2, '0');
+
+          document.getElementById('timer').innerText = `${minute}:${second}`;
+
+          time = time - 1;
+        }, 1000);
+      }
+
+      function getAuthNumber() {
+        const authNumber = String(Math.floor(Math.random() * 1000000)).padStart(6, '0');
+
+        getTimer();
+        document.getElementById('auth-num').innerText = authNumber;
+      }
+    </script>
+  </head>
+  <body>
+    <div id="auth-num">인증번호를 요청해 주세요.</div>
+    <button id="button-auth" onclick="getAuthNumber()">인증번호 요청하기</button>
+    <div id="timer">03:00</div>
+  </body>
+</html>

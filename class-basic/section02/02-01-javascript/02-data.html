@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>다양한 데이터 저장 실습</title>
+    <script>
+      // 1. 변수
+
+      let myName = '철수';
+      myName = '영희';
+
+      console.log(myName);
+
+      const friendName = '철수';
+      //   friendName = '영희';
+
+      console.log(friendName);
+
+      // 2. 변수의 계산
+
+      const money1 = 1000;
+      const money2 = 5000;
+      const total1 = money1 + money2;
+      console.log(total1);
+
+      const money3 = '1000';
+      const money4 = '5000';
+      const total2 = money3 + money4;
+      console.log(total2);
+
+      const money5 = 1000;
+      const money6 = '5000';
+      const total3 = money5 + money6;
+      console.log(total3); // 암묵적 형 변환이 일어남
+
+      // 3. 객체에 저장하기
+
+      const studentCard1 = {
+        name: '철수',
+        age: 11,
+        school: '다람쥐초등학교',
+      };
+
+      const studentCard2 = {
+        name: '영희',
+        age: 12,
+        school: '토끼초등학교',
+      };
+
+      const studentCard3 = {
+        name: '맹구',
+        age: 13,
+        school: '공룡초등학교',
+      };
+
+      console.log(studentCard1.age);
+      console.log(studentCard2.name);
+      console.log(studentCard3.school);
+
+      // 4. 배열에 저장하기
+
+      const candies = ['사과맛사탕', '포도맛사탕', '콜라맛사탕'];
+      const cardList = [studentCard1, studentCard2];
+
+      candies.push('오렌지맛사탕');
+      console.log(candies);
+
+      cardList.push(studentCard3);
+      console.log(cardList);
+      console.log(cardList.length);
+
+      console.log(cardList[cardList.length - 1]);
+      const lastIndex = cardList.length - 1;
+      console.log(cardList[lastIndex]);
+
+      //   5. 배열 안의 객체에서 꺼내기
+
+      console.log(cardList[0].age);
+    </script>
+  </head>
+  <body></body>
+</html>

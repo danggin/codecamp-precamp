@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>flex-box</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      .우리동네 {
+        width: 500px;
+        height: 500px;
+        background-color: burlywood;
+        display: flex;
+        /* justify-content: center; */
+        justify-content: space-between;
+        align-items: flex-end;
+      }
+
+      .우리동네 div {
+        width: 150px;
+        height: 150px;
+      }
+
+      .철수네집 {
+        background-color: limegreen;
+      }
+
+      .영희네집 {
+        background-color: aquamarine;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="우리동네">
+      <div class="철수네집">철수네집</div>
+      <div class="영희네집">영희네집</div>
+    </div>
+  </body>
+</html>

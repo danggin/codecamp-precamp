@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>이메일 쪼개기 실습</title>
+    <script>
+      const email = 'codecamp@gmail.com';
+
+      const dividedEmail = email.split('@');
+      console.log(dividedEmail);
+
+      const id = dividedEmail[0];
+      const domain = dividedEmail[1];
+      console.log(id, domain);
+
+      const slicedId = id.slice(0, 4);
+      const masking = '****';
+      const resultId = slicedId + masking;
+      console.log(resultId);
+
+      const result = resultId + '@' + domain;
+      console.log(result);
+    </script>
+  </head>
+  <body></body>
+</html>

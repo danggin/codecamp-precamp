@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>인풋 검증 기능</title>
+    <script>
+      function validation() {
+        const email = document.getElementById('email-input').value;
+        const female = document.getElementById('female').checked;
+        const male = document.getElementById('male').checked;
+        const agree = document.getElementById('agree').checked;
+        const button = document.getElementById('button-signup');
+        // const isValid = email.trim() === '' || !female || !male || !agree;
+        const isFilledEmail = email.trim() !== '';
+        const isCheckedGender = female === true || male === true;
+        const isCheckedAgree = agree === true;
+
+        if (isFilledEmail && isCheckedGender && isCheckedAgree) {
+          // 모두 다 채웠을 때 실행할 내용
+          button.disabled = false;
+          button.style = 'background-color: yellow;';
+        } else {
+          button.disabled = true;
+          button.style = 'background-color: none;';
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="content">
+      <input type="text" id="email-input" oninput="validation()" />
+
+      <div class="flex-box gender">
+        <input type="radio" name="gender" id="female" oninput="validation()" />
+        <label for="female">여성</label>
+        <input type="radio" name="gender" id="male" oninput="validation()" />
+        <label for="male">남성</label>
+      </div>
+
+      <div class="flex-box agree">
+        <input type="checkbox" id="agree" oninput="validation()" />
+        <label for="agree">이용약관, 개인정보 수집 및 이용, 마케팅 활용 선택에 모두 동의합니다.</label>
+      </div>
+    </div>
+
+    <button id="button-signup" onclick="showWelcomeMessage()" disabled>가입하기</button>
+  </body>
+</html>

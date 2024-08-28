@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function show(name) {
+        alert(`가입하신 이름은 ${name}입니다.`);
+      }
+
+      function join() {
+        const userName = document.getElementById('name').value;
+        // document.getElementById('user').innerText = userName;
+        document.getElementById('user').innerHTML = `
+        <div onclick="show('${userName}')">${userName}</div>
+        `;
+      }
+    </script>
+  </head>
+  <body>
+    <div id="user"></div>
+    <input type="text" id="name" placeholder="이름을 입력하세요" />
+    <button onclick="join()">회원가입</button>
+  </body>
+</html>

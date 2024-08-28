@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>내장 객체 실습 1</title>
+    <script>
+      const mathObject = {
+        max: function () {
+          console.log('최대값을 구합니다.');
+        },
+        random: function () {
+          return 10;
+        },
+        round: function (number) {
+          console.log('반올림할 값: ' + number);
+        },
+      };
+
+      mathObject.max();
+      mathObject.round(5.43456);
+      const randomNumberByMe = mathObject.random();
+      console.log(randomNumberByMe);
+
+      // 1. 수학 객체 Math Object
+
+      console.log(Math.round(4.433));
+      const randomNumber = Math.random();
+      console.log(randomNumber);
+
+      // 2. 날짜 객체 Date Object
+
+      const today = new Date();
+      console.log(today);
+
+      console.log(today.getFullYear());
+      console.log(today.getMonth() + 1);
+      // getMonth 의 month는 0 ~ 11월로 만들었기 때문에 +1을 해줘야 함
+      console.log(today.getDate());
+      console.log(today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate());
+    </script>
+  </head>
+  <body></body>
+</html>
